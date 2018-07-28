@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Most Frequent Element</title>
+</head>
+<body style="text-align: center; font-family: monospace; font-size: 30px;">
+  <h2>Find The Most Frequent Element</h2>
+  <p id="p1"></p>
+  <button onclick="getMostFrequentElement()" style="width: 250px; height: 50px; font-size: 18px;">Find It!</button>
+  <p id="p2">_</p>
+
+
+  <script>
+    var array = [3, 2, 'a', 'a', 'a', 'a', 2, 2, 2, 2, 2, 4];
+    document.getElementById("p1").innerHTML = array;  
+
+
+    function getMostFrequentElement() {
+      var i,j;
+      var element =0, count =0;
+      for(i = 0; i < length; i++) {
+        var tempElement = array[i];
+        var tempCount = 0;
+        for (j = 0; j < length; j++) {
+          if (array[j]==tempElement) {
+            temCount++;
+          }
+
+        }
+        if(tempCount > count){
+            count = tempCount;
+            element = tempElement;
+        }
+      }
+
+      document.getElementById("p2").innerHTML = element;
+    }
+
+  </script>
+</body>
+</html>
+
